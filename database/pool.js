@@ -2,7 +2,7 @@ import { Pool } from "pg";
 import { configDotenv } from "dotenv";
 
 configDotenv({
-  path: `.env.${process.env.NODE_ENV ?? "development"}`,
+  path: `.env.${process.env.NODE_ENV ?? "local"}`,
   debug: process.env.IS_DEBUG
 });
 

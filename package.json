@@ -10,10 +10,14 @@
     "dev": "nodemon index.js",
     "start": "node index.js",
     "lint": "eslint .",
-    "format": "npx prettier . --write"
+    "format": "npx prettier . --write",
+    "migrate:create": " node-pg-migrate create",
+    "migrate:up": "dotenv -e .env.local -- node-pg-migrate up",
+    "migrate:down": "dotenv -e .env.local -- node-pg-migrate down"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
+    "dotenv-cli": "^11.0.0",
     "express": "^5.2.1",
     "pg": "^8.22.0"
   },
@@ -21,6 +25,7 @@
     "@eslint/js": "^10.0.1",
     "eslint": "^10.8.0",
     "globals": "^17.8.0",
+    "node-pg-migrate": "^9.0.0",
     "nodemon": "^3.1.14",
     "prettier": "^3.9.6",
     "prettier-plugin-embed": "^0.5.1",
