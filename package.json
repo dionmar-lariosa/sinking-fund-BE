@@ -1,0 +1,28 @@
+{
+  "name": "sinking-fund-be",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Dionmar Lariosa",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "lint": "eslint .",
+    "format": "npx prettier . --write"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.8.0",
+    "globals": "^17.8.0",
+    "nodemon": "^3.1.14",
+    "prettier": "^3.9.6",
+    "prettier-plugin-embed": "^0.5.1",
+    "prettier-plugin-sql": "^0.20.0"
+  }
+}
