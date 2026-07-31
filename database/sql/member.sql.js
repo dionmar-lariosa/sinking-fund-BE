@@ -1,10 +1,20 @@
 const MemberSql = {
-  members: /* sql */ `
-    SELECT
-      *
-    FROM
-      members;
-  `,
+  members: (filter) => {
+    return {
+      text: /* sql */ `
+        SELECT
+          *
+        FROM
+          members
+        WHERE
+          (
+            $1::text IS NULL
+            OR CONCAT_WS(' ', f_name, m_name, l_name) ILIKE '%' || $1 || '%'
+          )
+      `,
+      values: [filter]
+    };
+  },
 
   member: (id) => {
     return {
