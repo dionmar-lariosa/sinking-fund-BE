@@ -5,14 +5,14 @@ export function up(pgm) {
       primaryKey: true,
       notNull: true
     },
-    fName: {
+    f_name: {
       type: "varchar(100)",
       notNull: true
     },
-    mName: {
+    m_name: {
       type: "varchar(100)"
     },
-    lName: {
+    l_name: {
       type: "varchar(100)",
       notNull: true
     },
